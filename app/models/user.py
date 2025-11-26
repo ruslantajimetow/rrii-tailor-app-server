@@ -30,6 +30,8 @@ class User(Base):
     is_phone_verified = Column(Boolean, nullable=False, default=False)
     is_email_verified = Column(Boolean, nullable=False, default=False)
     role = Column(String(20), nullable=False, default=UserRole.USER)
+    email_otp_code = Column(String(6), nullable=True)
+    email_otp_expires_at = Column(DateTime(timezone=True), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(
         DateTime(timezone=True),
