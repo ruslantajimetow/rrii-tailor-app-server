@@ -103,6 +103,7 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -
         )
 
     to_encode.update({"exp": expire})
+    print(to_encode)
 
     encoded_jwt = jwt.encode(to_encode, JWT_SECRET_KEY, algorithm=JWT_ALGORITHM)
     return encoded_jwt

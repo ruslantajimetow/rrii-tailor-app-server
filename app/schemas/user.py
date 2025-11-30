@@ -30,6 +30,24 @@ class EmailVerifyOtpRequest(BaseModel):
     code: str = Field(..., min_length=4, max_length=10)
 
 
+class BindEmailStartRequest(BaseModel):
+    email: EmailStr
+    password: str = Field(..., min_length=6, max_length=128)
+
+
+class BindEmailVerifyRequest(BaseModel):
+    code: str = Field(..., min_length=4, max_length=10)
+
+
+class BindPhoneStartRequest(BaseModel):
+    phone_number: str = Field(..., min_length=5, max_length=32)
+
+
+class BindPhoneVerifyRequest(BaseModel):
+    phone_number: str = Field(..., min_length=5, max_length=32)
+    code: str = Field(..., min_length=4, max_length=10)
+
+
 class UserResponse(BaseModel):
     id: int
     uuid: UUID
