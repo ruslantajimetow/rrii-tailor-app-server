@@ -1,0 +1,66 @@
+# ───────────────────────────────────────────
+# Python
+# ───────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Environment / Secrets
+.env
+*.env
+.env.local
+
+# IDE garbage
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Byte-compiled
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Logs
+*.log
+
+# Alembic
+alembic/__pycache__/
+alembic/versions/__pycache__/
+
+# macOS
+.DS_Store
+
+# PyCharm
+*.iml
+
+# pytest / coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+coverage.xml
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# MyPy
+.mypy_cache/
+
+# Ruff / lint
+.ruff_cache/
+
+# Uvicorn reload artifacts
+*.pid
