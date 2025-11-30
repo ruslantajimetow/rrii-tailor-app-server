@@ -35,9 +35,6 @@ async def root():
     return {"message": "Server is running"}
 
 
-print("Hello world")
-
-
 @app.get("/health/db")
 async def health_db(db: Session = Depends(get_db)):
     try:
